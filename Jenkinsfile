@@ -4,21 +4,21 @@ pipeline {
   stages('CI') {
     stage('Checkout') {
       steps {
-        echo 'Checkout'
+        checkout scm
       }
     }
 
     stage('Build') {
       steps {
         // script
-         echo 'Checkout'
+         mvn clean package
       }
     }
 
     stage('Test') {
       steps {
         // script
-         echo 'Test'
+         mvn test
       }
     }
   }
