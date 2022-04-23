@@ -18,7 +18,6 @@ pipeline {
     
     stage('Test') {
       steps {
-        // script
          echo 'Build'
         sh 'mvn test'
       }
